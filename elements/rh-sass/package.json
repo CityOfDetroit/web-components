@@ -5,7 +5,7 @@
     "elementName": "rh-sass"
   },
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.1-alpha.0",
   "description": "Sass variables and mixins for rh-elements",
   "contributors": [
     {
