@@ -1,5 +1,5 @@
 {
-  "name": "city-of-detroit/default-theme",
+  "name": "@city-of-detroit/default-theme",
   "description": "web-components theme placeholder",
   "scripts": {
     "test": "../../node_modules/.bin/wct --configFile ../../wct.conf.json elements/all/test/"

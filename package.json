@@ -1,5 +1,5 @@
 {
-  "name": "city-of-detroit/web-components",
+  "name": "web-components",
   "version": "0.0.0",
   "description": "Detroit components",
   "wcfactory": {
@@ -7,7 +7,7 @@
     "askProps": true,
     "askHAX": true,
     "monorepo": "web-components",
-    "orgNpm": "city-of-detroit",
+    "orgNpm": "@city-of-detroit",
     "orgGit": "CityOfDetroit",
     "gitRepo": "git@github.com:CityOfDetroit/web-components.git",
     "sass": {
@@ -38,11 +38,11 @@
     "new": "yarn run rebuild-wcfcache && wcf element && yarn run test-suite-inject && yarn install --link-duplicates"
   },
   "devDependencies": {
-    "@storybook/addon-knobs": "4.1.13",
-    "@open-wc/webpack": "0.1.6",
-    "@open-wc/storybook": "0.2.8",
     "@emotion/core": "0.13.1",
     "@emotion/styled": "0.10.6",
+    "@open-wc/storybook": "0.2.8",
+    "@open-wc/webpack": "0.1.6",
+    "@storybook/addon-knobs": "4.1.13",
     "@webcomponents/webcomponentsjs": "2.2.7",
     "babel-plugin-external-helpers": "6.22.0",
     "babel-plugin-transform-custom-element-classes": "0.1.0",
@@ -96,18 +96,6 @@
     "whatwg-fetch": "3.0.0",
     "yo": "2.0.5"
   },
-  "dependencies": {
-    "@polymer/lit-element": "0.7.1",
-    "@polymer/polymer": "3.1.0",
-    "@polymer/iron-demo-helpers": "3.1.0",
-    "@skatejs/renderer-lit-html": "0.2.2",
-    "lit-html": "1.0.0",
-    "skatejs": "5.2.4",
-    "slim-js": "4.0.5",
-    "twig": "1.13.2",
-    "@lrnwebcomponents/deduping-fix": "2.0.5",
-    "@lrnwebcomponents/hax-body-behaviors": "2.0.5"
-  },
   "lint-staged": {
     "linters": {
       "*.{js,json}": [
@@ -149,5 +137,9 @@
     "hooks": {
       "pre-commit": "yarn run test-suite-inject > /dev/null && lint-staged"
     }
+  },
+  "dependencies": {
+    "fetch-ie8": "^1.5.0",
+    "promise-polyfill": "^8.1.0"
   }
 }
