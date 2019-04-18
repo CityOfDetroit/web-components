@@ -1,0 +1,16 @@
+{
+  "clicked": {
+    "name": "clicked",
+    "type": "Boolean",
+    "value": false,
+    "reflectToAttribute": false,
+    "observer": "_clickedChanged"
+  },
+  "color": {
+    "name": "color",
+    "type": "String",
+    "value": "color-1",
+    "reflectToAttribute": false,
+    "observer": "_colorChanged"
+  }
+}

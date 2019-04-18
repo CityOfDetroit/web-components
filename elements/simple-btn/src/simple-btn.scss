@@ -1,0 +1,41 @@
+@import "../../rh-sass/rh-sass";
+// ======== variables ===========
+$color-1: #004544;
+$color-2: #9fd5b3;
+$color-3: #E48F22;
+$color-4: #CF3234;
+$color-5: #444;
+$white: #fff;
+$black: #000;
+$base-duration: 1s;
+$cubic: cubic-bezier(.64,.09,.08,1);
+// ======== host ===========
+:host {
+  display: inline;
+  cursor: pointer;
+  padding: 1em;
+  background: $color-1;
+  color: $color-2;
+  transform: $base-duration ease;
+}
+
+:host(:hover){
+  background: $color-2;
+  color: $color-1;
+  transform: $base-duration ease;
+}
+
+:host([color = "color-2"]) {
+  background: $color-2;
+  color: $color-1;
+  transform: $base-duration ease;
+}
+:host(:hover[color = "color-2"]){
+  background: $color-1;
+  color: $color-2;
+  transform: $base-duration ease;
+}
+
+:host([hidden]) {
+  display: none;
+}
