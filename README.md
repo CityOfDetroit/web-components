@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/CityOfDetroit/web-components.svg?branch=master)](https://travis-ci.org/CityOfDetroit/web-components)
 [![Dependency Status](https://img.shields.io/david/CityOfDetroit/web-components.svg?style=flat)](https://david-dm.org/CityOfDetroit/web-components)
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/author/CityOfDetroit)
-Welcome to the Detroit components project!
+<br/>Welcome to the Detroit components project!
 ## Quick-start
 
 *Notice: You will need to use [Node](https://nodejs.org/en/) version 6.0 or higher. Verify that you have yarn enabled — if not [install yarn globally](https://yarnpkg.com/lang/en/docs/install/). These web components are written in [ES6](http://es6-features.org/) and build routines compile to es5 to encompass more browsers.*
