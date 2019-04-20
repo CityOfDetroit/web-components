@@ -1,0 +1,249 @@
+// ======== variables ===========
+$color-1: #004544;
+$color-2: #9fd5b3;
+$color-3: #E48F22;
+$color-4: #CF3234;
+$color-5: #444;
+$white: #fff;
+$black: #000;
+$base-duration: 1s;
+// ============ host ============
+:host {
+  display: inline;
+  text:{
+    display: none;
+  }
+  button{
+    cursor: pointer;
+    padding: .5em 1em;
+    transform: $base-duration ease-in-out;
+  }
+}
+:host([hidden]) {
+  display: none;
+}
+// =============== color 1 ===============
+:host([type="compress"][color="color-1"]){
+  button{
+    border: .25em solid transparent;
+    background-color: transparent;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: rgba($color-1, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="compress"][color="color-1"][active="false"]){
+  button{
+    cursor: not-allowed;
+    background-color: rgba($color-1, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="solid"][color="color-1"]){
+  button{
+    background-color: $color-1;
+    border: .25em solid $color-1;
+    color: $white;
+  }
+  button:hover{
+    border: .25em solid rgba($color-1, 0.3);
+    background-color: rgba($color-1, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="toggle"][color="color-1"][clicked=false]){
+  button{
+    background-color: $color-2;
+    border: .25em solid $color-2;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: rgba($color-2, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="toggle"][color="color-1"][clicked=true]){
+  button{
+    background-color: $color-4;
+    border: .25em solid $color-4;
+    color: $white;
+  }
+  button:hover{
+    background-color: rgba($color-4, 0.3);
+    color: $black;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="border"][color="color-1"]){
+  button{
+    border: .25em solid $color-1;
+    background-color: transparent;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: $color-1;
+    color: $white;
+    transform: $base-duration ease-in-out;
+  }
+}
+// =============== color 2 ===============
+:host([type="compress"][color="color-2"]){
+  button{
+    border: .25em solid transparent;
+    background-color: transparent;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: rgba($color-2, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="compress"][color="color-2"][active="false"]){
+  button{
+    cursor: not-allowed;
+    background-color: rgba($color-2, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="solid"][color="color-2"]){
+  button{
+    background-color: $color-2;
+    border: .25em solid $color-2;
+    color: $color-1;
+  }
+  button:hover{
+    border: .25em solid rgba($color-2, 0.3);
+    background-color: rgba($color-2, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="toggle"][color="color-2"][clicked=false]){
+  button{
+    background-color: $color-2;
+    border: .25em solid $color-2;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: rgba($color-2, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="toggle"][color="color-2"][clicked=true]){
+  button{
+    background-color: $color-4;
+    border: .25em solid $color-4;
+    color: $white;
+  }
+  button:hover{
+    background-color: rgba($color-4, 0.3);
+    color: $black;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="border"][color="color-2"]){
+  button{
+    border: .25em solid $color-2;
+    background-color: transparent;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: $color-2;
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+// =============== color 3 ===============
+:host([type="compress"][color="color-3"]){
+  button{
+    border: .25em solid transparent;
+    background-color: transparent;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: rgba($color-3, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="compress"][color="color-3"][active="false"]){
+  button{
+    cursor: not-allowed;
+    background-color: rgba($color-3, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="solid"][color="color-3"]){
+  button{
+    background-color: $color-3;
+    border: .25em solid $color-3;
+    color: $color-1;
+  }
+  button:hover{
+    border: .25em solid rgba($color-3, 0.3);
+    background-color: rgba($color-3, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="toggle"][color="color-3"][clicked=false]){
+  button{
+    background-color: $color-2;
+    border: .25em solid $color-2;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: rgba($color-2, 0.3);
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="toggle"][color="color-3"][clicked=true]){
+  button{
+    background-color: $color-4;
+    border: .25em solid $color-4;
+    color: $white;
+  }
+  button:hover{
+    background-color: rgba($color-4, 0.3);
+    color: $black;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="border"][color="color-3"]){
+  button{
+    border: .25em solid $color-3;
+    background-color: transparent;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: $color-3;
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}

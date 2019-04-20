@@ -7,7 +7,7 @@
     "askProps": true,
     "askHAX": true,
     "monorepo": "web-components",
-    "orgNpm": "@city-of-detroit",
+    "orgNpm": "@cityofdetroit",
     "orgGit": "CityOfDetroit",
     "gitRepo": "git@github.com:CityOfDetroit/web-components.git",
     "sass": {

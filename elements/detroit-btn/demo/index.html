@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>DetroitBtn: detroit-btn Demo</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/@lrnwebcomponents/deduping-fix/deduping-fix.js"></script>
+    <script src="../node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
+      import '@polymer/iron-demo-helpers/demo-snippet.js';
+      import '../detroit-btn.js';
+    </script>
+    <style is="custom-style" include="demo-pages-shared-styles"></style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Basic detroit-btn demo</h3>
+      <demo-snippet>
+        <template>
+          <detroit-btn>
+            Solid button
+          </detroit-btn>
+          <detroit-btn type="toggle" color="color-1">
+            Toggle button
+          </detroit-btn>
+          <detroit-btn type="border" color="color-1">
+            Border button
+          </detroit-btn>
+          <detroit-btn type="compress" color="color-1">
+            Compress button
+          </detroit-btn>
+          <detroit-btn type="compress" color="color-1" active="false">
+            Disabled button
+          </detroit-btn>
+          <br><br>
+          <detroit-btn color="color-2">
+            Solid button
+          </detroit-btn>
+          <detroit-btn type="toggle" color="color-2">
+            Toggle button
+          </detroit-btn>
+          <detroit-btn type="border" color="color-2">
+            Border button
+          </detroit-btn>
+          <detroit-btn type="compress" color="color-2">
+            Compress button
+          </detroit-btn>
+          <detroit-btn type="compress" color="color-2" active="false">
+            Disabled button
+          </detroit-btn>
+          <br><br>
+          <detroit-btn color="color-3">
+            Solid button
+          </detroit-btn>
+          <detroit-btn type="toggle" color="color-3">
+            Toggle button
+          </detroit-btn>
+          <detroit-btn type="border" color="color-3">
+            Border button
+          </detroit-btn>
+          <detroit-btn type="compress" color="color-3">
+            Compress button
+          </detroit-btn>
+          <detroit-btn type="compress" color="color-3" active="false">
+            Disabled button
+          </detroit-btn>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

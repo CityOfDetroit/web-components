@@ -1,0 +1,22 @@
+{
+  "type": {
+    "name": "type",
+    "type": "String",
+    "value": "solid"
+  },
+  "color": {
+    "name": "color",
+    "type": "String",
+    "value": "color-1"
+  },
+  "clicked": {
+    "name": "clicked",
+    "type": "Bolean",
+    "value": false
+  },
+  "active": {
+    "name": "active",
+    "type": "Bolean",
+    "value": true
+  }
+}
