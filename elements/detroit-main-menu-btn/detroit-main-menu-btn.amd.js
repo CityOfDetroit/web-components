@@ -1,4 +1,4 @@
-define(["exports","./node_modules/lit-element/lit-element.js"],function(_exports,_litElement){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.DetroitMainMenuBtn=void 0;function _templateObject_af271e60632f11e9801dfb744dbeab60(){var data=babelHelpers.taggedTemplateLiteral(["\n<style>:host {\n  display: block; }\n\n:host([hidden]) {\n  display: none; }\n</style>\n<slot></slot>"]);_templateObject_af271e60632f11e9801dfb744dbeab60=function _templateObject_af271e60632f11e9801dfb744dbeab60(){return data};return data}/**
+define(["exports","./node_modules/lit-element/lit-element.js"],function(_exports,_litElement){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.DetroitMainMenuBtn=void 0;function _templateObject_54bc4840633611e9adc0651590e3a1bc(){var data=babelHelpers.taggedTemplateLiteral(["\n<style>:host {\n  display: block; }\n\n:host([hidden]) {\n  display: none; }\n</style>\n<slot></slot>"]);_templateObject_54bc4840633611e9adc0651590e3a1bc=function _templateObject_54bc4840633611e9adc0651590e3a1bc(){return data};return data}/**
  * `detroit-main-menu-btn`
  * `Main menu button component`
  *
@@ -10,7 +10,7 @@ define(["exports","./node_modules/lit-element/lit-element.js"],function(_exports
  * @lit-element
  * @demo demo/index.html
  */var DetroitMainMenuBtn=/*#__PURE__*/function(_LitElement){babelHelpers.inherits(DetroitMainMenuBtn,_LitElement);babelHelpers.createClass(DetroitMainMenuBtn,[{key:"render",// render function
-value:function render(){return(0,_litElement.html)(_templateObject_af271e60632f11e9801dfb744dbeab60())}// properties available to the custom element for data binding
+value:function render(){return(0,_litElement.html)(_templateObject_54bc4840633611e9adc0651590e3a1bc())}// properties available to the custom element for data binding
 },{key:"tag",/**
    * Store the tag name to make it easier to obtain directly.
    * @notice function name must be here for tooling to operate correctly

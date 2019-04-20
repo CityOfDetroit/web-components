@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 
+ * Copyright 2019
  * @license MIT, see License.md for full text.
  */import{LitElement,html}from"./node_modules/lit-element/lit-element.js";/**
  * `detroit-main-menu`
