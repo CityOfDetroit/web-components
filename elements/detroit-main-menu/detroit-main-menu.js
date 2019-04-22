@@ -29,8 +29,8 @@ class DetroitMainMenu extends LitElement {
           display: none;
         }
       </style>
-      <slot></slot>
-      <div>${this.active}</div>
+      <detroit-main-menu-btn> </detroit-main-menu-btn>
+      <nav></nav>
     `;
   }
 
