@@ -59,6 +59,22 @@ class DetroitMainMenuBtn extends LitElement {
   // disconnectedCallback() {}
 
   // attributeChangedCallback(attr, oldValue, newValue) {}
+  // Observer clicked for changes
+  _clickedChanged(newValue, oldValue) {
+    if (typeof newValue !== typeof undefined) {
+      console.log(newValue);
+    }
+  }
+
+  clickHandler(event) {
+    if (this.attributes.clicked.value === "false") {
+      this.attributes.clicked.value = true;
+      event.target.setAttribute("aria-expanded", this.attributes.clicked.value);
+    } else {
+      this.attributes.clicked.value = false;
+      event.target.setAttribute("aria-expanded", this.attributes.clicked.value);
+    }
+  }
 }
 customElements.define("detroit-main-menu-btn", DetroitMainMenuBtn);
 export { DetroitMainMenuBtn };

@@ -21,21 +21,84 @@ class DetroitMainMenuBtn extends LitElement {
   render() {
     return html`
       <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900");
         :host {
           display: block;
+        }
+        :host button {
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 5em;
+          height: 5em;
+          background-color: #feb70d;
+          color: #000;
+          transition: transform 250ms ease;
+          cursor: pointer;
+          z-index: 200;
+          font-weight: bold;
+          padding: 1em 1em 0.5em 1em;
+        }
+        :host button span {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 0.25em;
+          background-color: #000;
+          float: left;
+          transform-origin: center center;
+          transition: transform 250ms ease;
+          z-index: 200;
+        }
+        :host button span:nth-of-type(1) {
+          transform: translateY(-0.25em);
+        }
+        :host button span:nth-of-type(3) {
+          transform: translateY(0.25em);
+          margin-bottom: 0.4em;
+        }
+
+        :host([clicked="true"]) button span {
+          background-color: #000;
+          transition: transform 250ms ease;
+        }
+        :host([clicked="true"]) button span:nth-of-type(1) {
+          transform: translateY(1px) rotate(45deg);
+        }
+        :host([clicked="true"]) button span:nth-of-type(2) {
+          display: none;
+        }
+        :host([clicked="true"]) button span:nth-of-type(3) {
+          transform: translateY(-1px) rotate(-45deg);
+          margin-bottom: 0.8em;
         }
 
         :host([hidden]) {
           display: none;
         }
       </style>
-      <slot></slot>
+      <button @click=${this.clickHandler} role="button" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+        <slot></slot>
+      </button>
     `;
   }
 
   // properties available to the custom element for data binding
   static get properties() {
-    return {};
+    return {
+      clicked: {
+        name: "clicked",
+        type: "Boolean",
+        value: "false",
+        reflectToAttribute: true,
+        observer: "_clickedChanged"
+      }
+    };
   }
 
   /**
@@ -78,6 +141,22 @@ class DetroitMainMenuBtn extends LitElement {
   // disconnectedCallback() {}
 
   // attributeChangedCallback(attr, oldValue, newValue) {}
+  // Observer clicked for changes
+  _clickedChanged(newValue, oldValue) {
+    if (typeof newValue !== typeof undefined) {
+      console.log(newValue);
+    }
+  }
+
+  clickHandler(event) {
+    if (this.attributes.clicked.value === "false") {
+      this.attributes.clicked.value = true;
+      event.target.setAttribute("aria-expanded", this.attributes.clicked.value);
+    } else {
+      this.attributes.clicked.value = false;
+      event.target.setAttribute("aria-expanded", this.attributes.clicked.value);
+    }
+  }
 }
 customElements.define("detroit-main-menu-btn", DetroitMainMenuBtn);
 export { DetroitMainMenuBtn };

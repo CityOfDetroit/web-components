@@ -1,6 +1,78 @@
-
+// ======== variables ===========
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900');
+$color-1: #004544;
+$color-2: #9fd5b3;
+$color-3: #feb70d;
+$color-4: #CF3234;
+$color-5: #444;
+$white: #fff;
+$black: #000;
+$base-duration: 1s;
+// ============ host ============
 :host {
   display: block;
+
+  button{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 5em;
+    height: 5em;
+    background-color: $color-3;
+    color: $black;
+    transition: transform 250ms ease;
+    cursor: pointer;
+    z-index: 200;
+    font-weight: bold;
+    padding: 1em 1em .5em 1em;
+
+    span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: .25em;
+      background-color: $black;
+      float: left;
+      transform-origin: center center;
+      transition: transform 250ms ease;
+      z-index: 200;
+  
+      &:nth-of-type(1) {
+        transform: translateY(-.25em);
+      }
+  
+      &:nth-of-type(3) {
+        transform: translateY(.25em);
+        margin-bottom: .4em;
+      }
+    }
+  }
+}
+
+:host([clicked="true"]) {
+
+  button{
+
+    span {
+      background-color: $black;
+      transition: transform 250ms ease;
+
+      &:nth-of-type(1) {
+        transform: translateY(1px) rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+
+      &:nth-of-type(3) {
+        transform: translateY(-1px) rotate(-45deg);
+        margin-bottom: .8em;
+      }
+    }
+  }
 }
 
 :host([hidden]) {

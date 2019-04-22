@@ -1,5 +1,5 @@
 /**
- * Copyright 2019
+ * Copyright 2019 
  * @license MIT, see License.md for full text.
  */import{LitElement,html}from"./node_modules/lit-element/lit-element.js";/**
  * `detroit-main-menu-btn`
@@ -20,8 +20,9 @@ render(){return html`
 :host([hidden]) {
   display: none; }
 </style>
-<slot></slot>`}// properties available to the custom element for data binding
-static get properties(){return{}}/**
+<slot></slot>
+<div>${this.clicked}</div>`}// properties available to the custom element for data binding
+static get properties(){return{clicked:{name:"clicked",type:"Boolean",value:"false",reflectToAttribute:!0,observer:"_clickedChanged"}}}/**
    * Store the tag name to make it easier to obtain directly.
    * @notice function name must be here for tooling to operate correctly
    */tag(){return"detroit-main-menu-btn"}// life cycle
@@ -35,4 +36,5 @@ let obj=DetroitMainMenuBtn.properties;for(let p in obj){if(obj.hasOwnProperty(p)
 // }
 // disconnectedCallback() {}
 // attributeChangedCallback(attr, oldValue, newValue) {}
-}customElements.define("detroit-main-menu-btn",DetroitMainMenuBtn);export{DetroitMainMenuBtn};
+// Observer clicked for changes
+_clickedChanged(newValue,oldValue){if(typeof newValue!==typeof void 0){console.log(newValue)}}}customElements.define("detroit-main-menu-btn",DetroitMainMenuBtn);export{DetroitMainMenuBtn};
