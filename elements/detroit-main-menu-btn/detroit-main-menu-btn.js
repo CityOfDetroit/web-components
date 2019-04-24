@@ -79,7 +79,11 @@ class DetroitMainMenuBtn extends LitElement {
           display: none;
         }
       </style>
-      <button @click=${this.clickHandler} role="button" aria-expanded="false">
+      <button
+        .clicked="${this.clicked}"
+        @click=${this.clickHandler}
+        role="button"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -94,7 +98,7 @@ class DetroitMainMenuBtn extends LitElement {
       clicked: {
         name: "clicked",
         type: "Boolean",
-        value: "false",
+        value: false,
         reflectToAttribute: true,
         observer: "_clickedChanged"
       }
@@ -140,7 +144,9 @@ class DetroitMainMenuBtn extends LitElement {
   // }
   // disconnectedCallback() {}
 
-  // attributeChangedCallback(attr, oldValue, newValue) {}
+  // attributeChangedCallback(attr, oldValue, newValue) {
+  //   console.log(attr);
+  // }
   // Observer clicked for changes
   _clickedChanged(newValue, oldValue) {
     if (typeof newValue !== typeof undefined) {
@@ -151,10 +157,10 @@ class DetroitMainMenuBtn extends LitElement {
   clickHandler(event) {
     if (this.attributes.clicked.value === "false") {
       this.attributes.clicked.value = true;
-      event.target.setAttribute("aria-expanded", this.attributes.clicked.value);
+      this.setAttribute("aria-expanded", this.attributes.clicked.value);
     } else {
       this.attributes.clicked.value = false;
-      event.target.setAttribute("aria-expanded", this.attributes.clicked.value);
+      this.setAttribute("aria-expanded", this.attributes.clicked.value);
     }
   }
 }

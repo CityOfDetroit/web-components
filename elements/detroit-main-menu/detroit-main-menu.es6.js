@@ -20,8 +20,10 @@ render(){return html`
 :host([hidden]) {
   display: none; }
 </style>
-<slot></slot>
-<div>${this.active}</div>`}// properties available to the custom element for data binding
+<detroit-main-menu-btn>
+</detroit-main-menu-btn>
+<nav>
+</nav>`}// properties available to the custom element for data binding
 static get properties(){return{active:{name:"active",type:"Boolean",value:"false",reflectToAttribute:!0,observer:"_activeChanged"}}}/**
    * Store the tag name to make it easier to obtain directly.
    * @notice function name must be here for tooling to operate correctly

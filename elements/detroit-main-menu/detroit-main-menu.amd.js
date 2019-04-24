@@ -1,4 +1,4 @@
-define(["exports","./node_modules/lit-element/lit-element.js"],function(_exports,_litElement){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.DetroitMainMenu=void 0;function _templateObject_54b36ea0633611e9a9a7f528aeb3e43e(){var data=babelHelpers.taggedTemplateLiteral(["\n<style>:host {\n  display: block; }\n\n:host([hidden]) {\n  display: none; }\n</style>\n<slot></slot>\n<div>","</div>"]);_templateObject_54b36ea0633611e9a9a7f528aeb3e43e=function _templateObject_54b36ea0633611e9a9a7f528aeb3e43e(){return data};return data}/**
+define(["exports","./node_modules/lit-element/lit-element.js"],function(_exports,_litElement){"use strict";Object.defineProperty(_exports,"__esModule",{value:!0});_exports.DetroitMainMenu=void 0;function _templateObject_9570edc0653c11e9ad9621278db9829c(){var data=babelHelpers.taggedTemplateLiteral(["\n<style>:host {\n  display: block; }\n\n:host([hidden]) {\n  display: none; }\n</style>\n<detroit-main-menu-btn>\n</detroit-main-menu-btn>\n<nav>\n</nav>"]);_templateObject_9570edc0653c11e9ad9621278db9829c=function _templateObject_9570edc0653c11e9ad9621278db9829c(){return data};return data}/**
  * `detroit-main-menu`
  * `Site main menu component`
  *
@@ -10,7 +10,7 @@ define(["exports","./node_modules/lit-element/lit-element.js"],function(_exports
  * @lit-element
  * @demo demo/index.html
  */var DetroitMainMenu=/*#__PURE__*/function(_LitElement){babelHelpers.inherits(DetroitMainMenu,_LitElement);babelHelpers.createClass(DetroitMainMenu,[{key:"render",// render function
-value:function render(){return(0,_litElement.html)(_templateObject_54b36ea0633611e9a9a7f528aeb3e43e(),this.active)}// properties available to the custom element for data binding
+value:function render(){return(0,_litElement.html)(_templateObject_9570edc0653c11e9ad9621278db9829c())}// properties available to the custom element for data binding
 },{key:"tag",/**
    * Store the tag name to make it easier to obtain directly.
    * @notice function name must be here for tooling to operate correctly

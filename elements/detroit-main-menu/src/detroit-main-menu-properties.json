@@ -2,7 +2,7 @@
   "active": {
     "name": "active",
     "type": "Boolean",
-    "value": "false",
+    "value": false,
     "reflectToAttribute": true,
     "observer": "_activeChanged"
   }

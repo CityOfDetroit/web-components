@@ -3,7 +3,8 @@
  * @license MIT, see License.md for full text.
  */
 import { LitElement, html } from "lit-element";
-
+import "@cityofdetroit/detroit-btn/detroit-btn.js";
+import "@cityofdetroit/detroit-main-menu-btn/detroit-main-menu-btn.js";
 /**
  * `detroit-main-menu`
  * `Site main menu component`
@@ -20,18 +21,28 @@ class DetroitMainMenu extends LitElement {
   // render function
   render() {
     return html`
-      <style>
-        :host {
-          display: block;
-        }
+<style>:host {
+  display: block; }
 
-        :host([hidden]) {
-          display: none;
-        }
-      </style>
-      <detroit-main-menu-btn> </detroit-main-menu-btn>
-      <nav></nav>
-    `;
+:host([hidden]) {
+  display: none; }
+</style>
+<detroit-main-menu-btn .clicked="${this.clicked}" @click=${this.clickHandler} > 
+    MENU
+</detroit-main-menu-btn>
+<nav>
+    <ul>
+        <li>
+            <a href="#departments">DEPARMENTS</a><detroit-btn>></detroit-btn>
+        </li>
+        <li>
+            <a href="#governemt">GOVERNMENT</a><detroit-btn>></detroit-btn>
+        </li>
+        <li>
+            <a href="#how-do-i">HOW DO I</a><detroit-btn>></detroit-btn>
+        </li>
+    <ul>
+</nav>`;
   }
 
   // properties available to the custom element for data binding
@@ -40,7 +51,7 @@ class DetroitMainMenu extends LitElement {
       active: {
         name: "active",
         type: "Boolean",
-        value: "false",
+        value: false,
         reflectToAttribute: true,
         observer: "_activeChanged"
       }
@@ -86,12 +97,21 @@ class DetroitMainMenu extends LitElement {
   // }
   // disconnectedCallback() {}
 
-  // attributeChangedCallback(attr, oldValue, newValue) {}
+  // attributeChangedCallback(attr, oldValue, newValue) {
+  //   console.log(attr);
+  // }
   // Observer active for changes
   _activeChanged(newValue, oldValue) {
     if (typeof newValue !== typeof undefined) {
       console.log(newValue);
     }
+  }
+
+  clickHandler(event) {
+    // console.log(event);
+    this.attributes.active.value = this.shadowRoot.childNodes[4].getAttribute(
+      "clicked"
+    );
   }
 }
 customElements.define("detroit-main-menu", DetroitMainMenu);

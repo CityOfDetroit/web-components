@@ -58,7 +58,9 @@ class DetroitMainMenuBtn extends LitElement {
   // }
   // disconnectedCallback() {}
 
-  // attributeChangedCallback(attr, oldValue, newValue) {}
+  // attributeChangedCallback(attr, oldValue, newValue) {
+  //   console.log(attr);
+  // }
   // Observer clicked for changes
   _clickedChanged(newValue, oldValue) {
     if (typeof newValue !== typeof undefined) {
@@ -69,10 +71,10 @@ class DetroitMainMenuBtn extends LitElement {
   clickHandler(event) {
     if (this.attributes.clicked.value === "false") {
       this.attributes.clicked.value = true;
-      event.target.setAttribute("aria-expanded", this.attributes.clicked.value);
+      this.setAttribute("aria-expanded", this.attributes.clicked.value);
     } else {
       this.attributes.clicked.value = false;
-      event.target.setAttribute("aria-expanded", this.attributes.clicked.value);
+      this.setAttribute("aria-expanded", this.attributes.clicked.value);
     }
   }
 }

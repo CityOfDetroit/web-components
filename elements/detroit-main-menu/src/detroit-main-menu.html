@@ -1,4 +1,16 @@
-<detroit-main-menu-btn>
+<detroit-main-menu-btn .clicked="${this.clicked}" @click=${this.clickHandler} > 
+    MENU
 </detroit-main-menu-btn>
 <nav>
+    <ul>
+        <li>
+            <a href="#departments">DEPARMENTS</a><detroit-btn>></detroit-btn>
+        </li>
+        <li>
+            <a href="#governemt">GOVERNMENT</a><detroit-btn>></detroit-btn>
+        </li>
+        <li>
+            <a href="#how-do-i">HOW DO I</a><detroit-btn>></detroit-btn>
+        </li>
+    <ul>
 </nav>

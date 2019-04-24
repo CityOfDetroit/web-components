@@ -2,7 +2,7 @@
   "clicked": {
     "name": "clicked",
     "type": "Boolean",
-    "value": "false",
+    "value": false,
     "reflectToAttribute": true,
     "observer": "_clickedChanged"
   }

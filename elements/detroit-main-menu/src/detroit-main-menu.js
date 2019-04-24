@@ -3,7 +3,8 @@
  * @license MIT, see License.md for full text.
  */
 import { LitElement, html } from "lit-element";
-
+import "@cityofdetroit/detroit-btn/detroit-btn.js";
+import "@cityofdetroit/detroit-main-menu-btn/detroit-main-menu-btn.js";
 /**
  * `detroit-main-menu`
  * `Site main menu component`
@@ -58,12 +59,21 @@ class DetroitMainMenu extends LitElement {
   // }
   // disconnectedCallback() {}
 
-  // attributeChangedCallback(attr, oldValue, newValue) {}
+  // attributeChangedCallback(attr, oldValue, newValue) {
+  //   console.log(attr);
+  // }
   // Observer active for changes
   _activeChanged(newValue, oldValue) {
     if (typeof newValue !== typeof undefined) {
       console.log(newValue);
     }
+  }
+
+  clickHandler(event) {
+    // console.log(event);
+    this.attributes.active.value = this.shadowRoot.childNodes[4].getAttribute(
+      "clicked"
+    );
   }
 }
 customElements.define("detroit-main-menu", DetroitMainMenu);
