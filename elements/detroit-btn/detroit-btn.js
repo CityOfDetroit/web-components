@@ -3,7 +3,8 @@
  * @license MIT, see License.md for full text.
  */
 import { LitElement, html } from "lit-element";
-
+import '@polymer/iron-icon/iron-icon.js';
+import '@polymer/iron-icons/iron-icons.js';
 /**
  * `detroit-btn`
  * `Simple button component`
@@ -17,265 +18,225 @@ import { LitElement, html } from "lit-element";
  * @demo demo/index.html
  */
 class DetroitBtn extends LitElement {
+  
   // render function
   render() {
     return html`
-      <style>
-        :host {
-          display: inline;
-          text-display: none;
-        }
-        :host button {
-          cursor: pointer;
-          padding: 0.5em 1em;
-          transform: 1s ease-in-out;
-        }
+<style>@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900");
+:host {
+  display: inline;
+  text-display: none; }
+  :host button {
+    cursor: pointer;
+    padding: .5em 1em;
+    transform: 1s ease-in-out; }
 
-        :host([hidden]) {
-          display: none;
-        }
+:host([hidden]) {
+  display: none; }
 
-        :host([type="compress"][color="color-1"]) button {
-          border: 0.25em solid transparent;
-          background-color: transparent;
-          color: #004544;
-        }
+:host([type="compress"][color="color-1"]) button {
+  border: .25em solid transparent;
+  background-color: transparent;
+  color: #004544; }
 
-        :host([type="compress"][color="color-1"]) button:hover {
-          background-color: rgba(0, 69, 68, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="compress"][color="color-1"]) button:hover {
+  background-color: #004544;
+  color: #fff;
+  transform: 1s ease-in-out; }
 
-        :host([type="compress"][color="color-1"][active="false"]) button {
-          cursor: not-allowed;
-          background-color: rgba(0, 69, 68, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="compress"][color="color-1"][active="false"]) button {
+  cursor: not-allowed;
+  background-color: rgba(0, 69, 68, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="solid"][color="color-1"]) button {
-          background-color: #004544;
-          border: 0.25em solid #004544;
-          color: #fff;
-        }
+:host([type="solid"][color="color-1"]) button {
+  background-color: #004544;
+  border: 0.25em solid #004544;
+  color: #fff; }
 
-        :host([type="solid"][color="color-1"]) button:hover {
-          border: 0.25em solid rgba(0, 69, 68, 0.3);
-          background-color: rgba(0, 69, 68, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="solid"][color="color-1"]) button:hover {
+  border: 0.25em solid rgba(0, 69, 68, 0.3);
+  background-color: rgba(0, 69, 68, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="toggle"][color="color-1"][clicked="false"]) button {
-          background-color: #9fd5b3;
-          border: 0.25em solid #9fd5b3;
-          color: #004544;
-        }
+:host([type="toggle"][color="color-1"][clicked=false]) button {
+  background-color: #9fd5b3;
+  border: 0.25em solid #9fd5b3;
+  color: #004544; }
 
-        :host([type="toggle"][color="color-1"][clicked="false"]) button:hover {
-          background-color: rgba(159, 213, 179, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="toggle"][color="color-1"][clicked=false]) button:hover {
+  background-color: rgba(159, 213, 179, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="toggle"][color="color-1"][clicked="true"]) button {
-          background-color: #cf3234;
-          border: 0.25em solid #cf3234;
-          color: #fff;
-        }
+:host([type="toggle"][color="color-1"][clicked=true]) button {
+  background-color: #cb4d4f;
+  border: 0.25em solid #cb4d4f;
+  color: #fff; }
 
-        :host([type="toggle"][color="color-1"][clicked="true"]) button:hover {
-          background-color: rgba(207, 50, 52, 0.3);
-          color: #000;
-          transform: 1s ease-in-out;
-        }
+:host([type="toggle"][color="color-1"][clicked=true]) button:hover {
+  background-color: rgba(203, 77, 79, 0.3);
+  color: #000;
+  transform: 1s ease-in-out; }
 
-        :host([type="border"][color="color-1"]) button {
-          border: 0.25em solid #004544;
-          background-color: transparent;
-          color: #004544;
-        }
+:host([type="border"][color="color-1"]) button {
+  border: 0.25em solid #004544;
+  background-color: transparent;
+  color: #004544; }
 
-        :host([type="border"][color="color-1"]) button:hover {
-          background-color: #004544;
-          color: #fff;
-          transform: 1s ease-in-out;
-        }
+:host([type="border"][color="color-1"]) button:hover {
+  background-color: #004544;
+  color: #fff;
+  transform: 1s ease-in-out; }
 
-        :host([type="compress"][color="color-2"]) button {
-          border: 0.25em solid transparent;
-          background-color: transparent;
-          color: #004544;
-        }
+:host([type="compress"][color="color-2"]) button {
+  border: .25em solid transparent;
+  background-color: transparent;
+  color: #004544; }
 
-        :host([type="compress"][color="color-2"]) button:hover {
-          background-color: rgba(159, 213, 179, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="compress"][color="color-2"]) button:hover {
+  background-color: #9fd5b3;
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="compress"][color="color-2"][active="false"]) button {
-          cursor: not-allowed;
-          background-color: rgba(159, 213, 179, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="compress"][color="color-2"][active="false"]) button {
+  cursor: not-allowed;
+  background-color: rgba(159, 213, 179, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="solid"][color="color-2"]) button {
-          background-color: #9fd5b3;
-          border: 0.25em solid #9fd5b3;
-          color: #004544;
-        }
+:host([type="solid"][color="color-2"]) button {
+  background-color: #9fd5b3;
+  border: 0.25em solid #9fd5b3;
+  color: #004544; }
 
-        :host([type="solid"][color="color-2"]) button:hover {
-          border: 0.25em solid rgba(159, 213, 179, 0.3);
-          background-color: rgba(159, 213, 179, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="solid"][color="color-2"]) button:hover {
+  border: 0.25em solid rgba(159, 213, 179, 0.3);
+  background-color: rgba(159, 213, 179, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="toggle"][color="color-2"][clicked="false"]) button {
-          background-color: #9fd5b3;
-          border: 0.25em solid #9fd5b3;
-          color: #004544;
-        }
+:host([type="toggle"][color="color-2"][clicked=false]) button {
+  background-color: #9fd5b3;
+  border: 0.25em solid #9fd5b3;
+  color: #004544; }
 
-        :host([type="toggle"][color="color-2"][clicked="false"]) button:hover {
-          background-color: rgba(159, 213, 179, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="toggle"][color="color-2"][clicked=false]) button:hover {
+  background-color: rgba(159, 213, 179, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="toggle"][color="color-2"][clicked="true"]) button {
-          background-color: #cf3234;
-          border: 0.25em solid #cf3234;
-          color: #fff;
-        }
+:host([type="toggle"][color="color-2"][clicked=true]) button {
+  background-color: #cb4d4f;
+  border: 0.25em solid #cb4d4f;
+  color: #fff; }
 
-        :host([type="toggle"][color="color-2"][clicked="true"]) button:hover {
-          background-color: rgba(207, 50, 52, 0.3);
-          color: #000;
-          transform: 1s ease-in-out;
-        }
+:host([type="toggle"][color="color-2"][clicked=true]) button:hover {
+  background-color: rgba(203, 77, 79, 0.3);
+  color: #000;
+  transform: 1s ease-in-out; }
 
-        :host([type="border"][color="color-2"]) button {
-          border: 0.25em solid #9fd5b3;
-          background-color: transparent;
-          color: #004544;
-        }
+:host([type="border"][color="color-2"]) button {
+  border: 0.25em solid #9fd5b3;
+  background-color: transparent;
+  color: #004544; }
 
-        :host([type="border"][color="color-2"]) button:hover {
-          background-color: #9fd5b3;
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="border"][color="color-2"]) button:hover {
+  background-color: #9fd5b3;
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="compress"][color="color-3"]) button {
-          border: 0.25em solid transparent;
-          background-color: transparent;
-          color: #004544;
-        }
+:host([type="compress"][color="color-3"]) button {
+  border: .25em solid transparent;
+  background-color: transparent;
+  color: #004544; }
 
-        :host([type="compress"][color="color-3"]) button:hover {
-          background-color: rgba(228, 143, 34, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="compress"][color="color-3"]) button:hover {
+  background-color: #f5b842;
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="compress"][color="color-3"][active="false"]) button {
-          cursor: not-allowed;
-          background-color: rgba(228, 143, 34, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="compress"][color="color-3"][active="false"]) button {
+  cursor: not-allowed;
+  background-color: rgba(245, 184, 66, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="solid"][color="color-3"]) button {
-          background-color: #e48f22;
-          border: 0.25em solid #e48f22;
-          color: #004544;
-        }
+:host([type="solid"][color="color-3"]) button {
+  background-color: #f5b842;
+  border: 0.25em solid #f5b842;
+  color: #004544; }
 
-        :host([type="solid"][color="color-3"]) button:hover {
-          border: 0.25em solid rgba(228, 143, 34, 0.3);
-          background-color: rgba(228, 143, 34, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="solid"][color="color-3"]) button:hover {
+  border: 0.25em solid rgba(245, 184, 66, 0.3);
+  background-color: rgba(245, 184, 66, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="toggle"][color="color-3"][clicked="false"]) button {
-          background-color: #9fd5b3;
-          border: 0.25em solid #9fd5b3;
-          color: #004544;
-        }
+:host([type="toggle"][color="color-3"][clicked=false]) button {
+  background-color: #9fd5b3;
+  border: 0.25em solid #9fd5b3;
+  color: #004544; }
 
-        :host([type="toggle"][color="color-3"][clicked="false"]) button:hover {
-          background-color: rgba(159, 213, 179, 0.3);
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
+:host([type="toggle"][color="color-3"][clicked=false]) button:hover {
+  background-color: rgba(159, 213, 179, 0.3);
+  color: #004544;
+  transform: 1s ease-in-out; }
 
-        :host([type="toggle"][color="color-3"][clicked="true"]) button {
-          background-color: #cf3234;
-          border: 0.25em solid #cf3234;
-          color: #fff;
-        }
+:host([type="toggle"][color="color-3"][clicked=true]) button {
+  background-color: #cb4d4f;
+  border: 0.25em solid #cb4d4f;
+  color: #fff; }
 
-        :host([type="toggle"][color="color-3"][clicked="true"]) button:hover {
-          background-color: rgba(207, 50, 52, 0.3);
-          color: #000;
-          transform: 1s ease-in-out;
-        }
+:host([type="toggle"][color="color-3"][clicked=true]) button:hover {
+  background-color: rgba(203, 77, 79, 0.3);
+  color: #000;
+  transform: 1s ease-in-out; }
 
-        :host([type="border"][color="color-3"]) button {
-          border: 0.25em solid #e48f22;
-          background-color: transparent;
-          color: #004544;
-        }
+:host([type="border"][color="color-3"]) button {
+  border: 0.25em solid #f5b842;
+  background-color: transparent;
+  color: #004544; }
 
-        :host([type="border"][color="color-3"]) button:hover {
-          background-color: #e48f22;
-          color: #004544;
-          transform: 1s ease-in-out;
-        }
-      </style>
-      <button
-        @click=${this.clickHandler}
-        aria-disabled="${this.attributes.active.value === "true"
-          ? false
-          : true}"
-        role="button"
-        aria-pressed="false"
-      >
-        <slot></slot>
-      </button>
-    `;
+:host([type="border"][color="color-3"]) button:hover {
+  background-color: #f5b842;
+  color: #004544;
+  transform: 1s ease-in-out; }
+</style>
+<button @click=${this.clickHandler} aria-disabled="${(this.attributes.active.value === "true") ? false : true }" role="button" aria-pressed="false">
+    <slot name="icon-left"></slot>
+    <slot name="title"></slot>
+    <slot name="icon-right"></slot>
+</button>`;
   }
 
   // properties available to the custom element for data binding
   static get properties() {
     return {
-      type: {
-        name: "type",
-        type: "String",
-        value: "solid"
-      },
-      color: {
-        name: "color",
-        type: "String",
-        value: "color-1"
-      },
-      clicked: {
-        name: "clicked",
-        type: "Bolean",
-        value: false
-      },
-      active: {
-        name: "active",
-        type: "Bolean",
-        value: true
-      }
-    };
+  "type": {
+    "name": "type",
+    "type": "String",
+    "value": "solid"
+  },
+  "color": {
+    "name": "color",
+    "type": "String",
+    "value": "color-1"
+  },
+  "clicked": {
+    "name": "clicked",
+    "type": "Bolean",
+    "value": false
+  },
+  "active": {
+    "name": "active",
+    "type": "Bolean",
+    "value": true
+  }
+}
+;
   }
 
   /**

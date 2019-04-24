@@ -8,6 +8,8 @@
 
 *Notice: You will need to use [Node](https://nodejs.org/en/) version 6.0 or higher. Verify that you have yarn enabled — if not [install yarn globally](https://yarnpkg.com/lang/en/docs/install/). These web components are written in [ES6](http://es6-features.org/) and build routines compile to es5 to encompass more browsers.*
 
+*Notice: If running in windows, you will need to create the symlinks for each element manually. You can download an [extension](http://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html) for easy creation. (Temporary while fixing postinstall.sh)*
+
 ### Install
 
 ```bash

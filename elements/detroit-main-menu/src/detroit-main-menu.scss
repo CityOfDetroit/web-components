@@ -1,6 +1,68 @@
-
+// ======== variables ===========
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900');
+$color-1: #004544;
+$color-2: #9fd5b3;
+$color-3: #feb70d;
+$color-4: #CF3234;
+$color-5: #444;
+$white: #fff;
+$black: #000;
+$base-duration: 1s;
+// ============ host ============
 :host {
   display: block;
+
+  nav{
+    position: fixed;
+    top: 0;
+    right: -30em;
+    background-color: $black;
+    color: $white;
+    width: 30em;
+    max-width: 100%;
+    transition: right $base-duration ease;
+	  z-index: 5;
+
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li{
+        display: flex;
+        align-items: stretch;
+
+        a{
+          flex: 1;
+          margin: auto;
+          text-decoration: none;
+          color: $white;
+          padding: .5em;
+        }
+
+        detroit-btn{
+          margin: auto;
+          width: 5em;
+        }
+      }
+      
+      li:hover{
+        background-color: $color-2;
+
+        a{
+          color: $color-1;
+        }
+      }
+    }
+  }
+}
+
+:host([active="true"]) {
+
+  nav{
+    right: 0em;
+    transition: right $base-duration ease;
+  }
 }
 
 :host([hidden]) {

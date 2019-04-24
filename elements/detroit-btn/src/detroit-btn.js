@@ -3,7 +3,8 @@
  * @license MIT, see License.md for full text.
  */
 import { LitElement, html } from "lit-element";
-
+import '@polymer/iron-icon/iron-icon.js';
+import '@polymer/iron-icons/iron-icons.js';
 /**
  * `detroit-btn`
  * `Simple button component`

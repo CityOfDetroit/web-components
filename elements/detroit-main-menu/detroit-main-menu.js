@@ -18,11 +18,47 @@ import "@cityofdetroit/detroit-main-menu-btn/detroit-main-menu-btn.js";
  * @demo demo/index.html
  */
 class DetroitMainMenu extends LitElement {
+  
   // render function
   render() {
     return html`
-<style>:host {
+<style>@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900");
+:host {
   display: block; }
+  :host nav {
+    position: fixed;
+    top: 0;
+    right: -30em;
+    background-color: #000;
+    color: #fff;
+    width: 30em;
+    max-width: 100%;
+    transition: right 1s ease;
+    z-index: 5; }
+    :host nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      :host nav ul li {
+        display: flex;
+        align-items: stretch; }
+        :host nav ul li a {
+          flex: 1;
+          margin: auto;
+          text-decoration: none;
+          color: #fff;
+          padding: .5em; }
+        :host nav ul li detroit-btn {
+          margin: auto;
+          width: 5em; }
+      :host nav ul li:hover {
+        background-color: #9fd5b3; }
+        :host nav ul li:hover a {
+          color: #004544; }
+
+:host([active="true"]) nav {
+  right: 0em;
+  transition: right 1s ease; }
 
 :host([hidden]) {
   display: none; }
@@ -33,13 +69,13 @@ class DetroitMainMenu extends LitElement {
 <nav>
     <ul>
         <li>
-            <a href="#departments">DEPARMENTS</a><detroit-btn>></detroit-btn>
+            <a href="#departments">DEPARMENTS</a><detroit-btn type="compress" color="color-1"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
         </li>
         <li>
-            <a href="#governemt">GOVERNMENT</a><detroit-btn>></detroit-btn>
+            <a href="#governemt">GOVERNMENT</a><detroit-btn type="compress" color="color-1"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
         </li>
         <li>
-            <a href="#how-do-i">HOW DO I</a><detroit-btn>></detroit-btn>
+            <a href="#how-do-i">HOW DO I</a><detroit-btn type="compress" color="color-1"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
         </li>
     <ul>
 </nav>`;
@@ -48,14 +84,15 @@ class DetroitMainMenu extends LitElement {
   // properties available to the custom element for data binding
   static get properties() {
     return {
-      active: {
-        name: "active",
-        type: "Boolean",
-        value: false,
-        reflectToAttribute: true,
-        observer: "_activeChanged"
-      }
-    };
+  "active": {
+    "name": "active",
+    "type": "Boolean",
+    "value": false,
+    "reflectToAttribute": true,
+    "observer": "_activeChanged"
+  }
+}
+;
   }
 
   /**

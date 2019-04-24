@@ -1,1 +1,5 @@
-<button @click=${this.clickHandler} aria-disabled="${(this.attributes.active.value === "true") ? false : true }" role="button" aria-pressed="false"><slot></slot></button>
+<button @click=${this.clickHandler} aria-disabled="${(this.attributes.active.value === "true") ? false : true }" role="button" aria-pressed="false">
+    <slot name="icon-left"></slot>
+    <slot name="title"></slot>
+    <slot name="icon-right"></slot>
+</button>
