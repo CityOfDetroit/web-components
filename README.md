@@ -1,4 +1,4 @@
-# detroit
+# Detroit Web Components
 [![Published on npm](https://img.shields.io/npm/v/city-of-detroit/web-components.svg?style=flat)](https://www.npmjs.com/package/city-of-detroit/web-components)
 [![Build Status](https://travis-ci.org/CityOfDetroit/web-components.svg?branch=master)](https://travis-ci.org/CityOfDetroit/web-components)
 [![Dependency Status](https://img.shields.io/david/CityOfDetroit/web-components.svg?style=flat)](https://david-dm.org/CityOfDetroit/web-components)

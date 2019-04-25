@@ -1,7 +1,7 @@
 // ======== variables ===========
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900');
-$color-1: #004544;
-$color-2: #9fd5b3;
+$color-1: #004445;
+$color-2: #9FD5B3;
 $color-3: #f5b842;
 $color-4: #cb4d4f;
 $color-5: #33566b;
@@ -11,6 +11,8 @@ $base-duration: 1s;
 // ============ host ============
 :host {
   display: inline;
+  font-family: 'Montserrat', sans-serif;
+
   text:{
     display: none;
   }
@@ -244,6 +246,81 @@ $base-duration: 1s;
   }
   button:hover{
     background-color: $color-3;
+    color: $color-1;
+    transform: $base-duration ease-in-out;
+  }
+}
+// =============== white ===============
+:host([type="compress"][color="white"]){
+  button{
+    border: .25em solid transparent;
+    background-color: transparent;
+    color: $white;
+  }
+  button:hover{
+    background-color: $color-1;
+    color: $white;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="compress"][color="white"][active="false"]){
+  button{
+    cursor: not-allowed;
+    background-color: rgba($white, 0.4);
+    color: $white;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="solid"][color="white"]){
+  button{
+    background-color: $white;
+    border: .25em solid $white;
+    color: $color-1;
+  }
+  button:hover{
+    border: .25em solid rgba($white, 0.3);
+    background-color: rgba($white, 0.3);
+    color: $white;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="toggle"][color="white"][clicked=false]){
+  button{
+    background-color: $color-2;
+    border: .25em solid $color-2;
+    color: $color-1;
+  }
+  button:hover{
+    background-color: rgba($color-2, 0.3);
+    color: $white;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="toggle"][color="white"][clicked=true]){
+  button{
+    background-color: $color-4;
+    border: .25em solid $color-4;
+    color: $white;
+  }
+  button:hover{
+    background-color: rgba($color-4, 0.3);
+    color: $white;
+    transform: $base-duration ease-in-out;
+  }
+}
+
+:host([type="border"][color="white"]){
+  button{
+    border: .25em solid $white;
+    background-color: transparent;
+    color: $white;
+  }
+  button:hover{
+    background-color: $white;
     color: $color-1;
     transform: $base-duration ease-in-out;
   }

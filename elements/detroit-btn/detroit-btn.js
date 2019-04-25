@@ -25,6 +25,7 @@ class DetroitBtn extends LitElement {
 <style>@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900");
 :host {
   display: inline;
+  font-family: 'Montserrat', sans-serif;
   text-display: none; }
   :host button {
     cursor: pointer;
@@ -37,38 +38,38 @@ class DetroitBtn extends LitElement {
 :host([type="compress"][color="color-1"]) button {
   border: .25em solid transparent;
   background-color: transparent;
-  color: #004544; }
+  color: #004445; }
 
 :host([type="compress"][color="color-1"]) button:hover {
-  background-color: #004544;
+  background-color: #004445;
   color: #fff;
   transform: 1s ease-in-out; }
 
 :host([type="compress"][color="color-1"][active="false"]) button {
   cursor: not-allowed;
-  background-color: rgba(0, 69, 68, 0.3);
-  color: #004544;
+  background-color: rgba(0, 68, 69, 0.3);
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="solid"][color="color-1"]) button {
-  background-color: #004544;
-  border: 0.25em solid #004544;
+  background-color: #004445;
+  border: 0.25em solid #004445;
   color: #fff; }
 
 :host([type="solid"][color="color-1"]) button:hover {
-  border: 0.25em solid rgba(0, 69, 68, 0.3);
-  background-color: rgba(0, 69, 68, 0.3);
-  color: #004544;
+  border: 0.25em solid rgba(0, 68, 69, 0.3);
+  background-color: rgba(0, 68, 69, 0.3);
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="toggle"][color="color-1"][clicked=false]) button {
-  background-color: #9fd5b3;
-  border: 0.25em solid #9fd5b3;
-  color: #004544; }
+  background-color: #9FD5B3;
+  border: 0.25em solid #9FD5B3;
+  color: #004445; }
 
 :host([type="toggle"][color="color-1"][clicked=false]) button:hover {
   background-color: rgba(159, 213, 179, 0.3);
-  color: #004544;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="toggle"][color="color-1"][clicked=true]) button {
@@ -82,50 +83,50 @@ class DetroitBtn extends LitElement {
   transform: 1s ease-in-out; }
 
 :host([type="border"][color="color-1"]) button {
-  border: 0.25em solid #004544;
+  border: 0.25em solid #004445;
   background-color: transparent;
-  color: #004544; }
+  color: #004445; }
 
 :host([type="border"][color="color-1"]) button:hover {
-  background-color: #004544;
+  background-color: #004445;
   color: #fff;
   transform: 1s ease-in-out; }
 
 :host([type="compress"][color="color-2"]) button {
   border: .25em solid transparent;
   background-color: transparent;
-  color: #004544; }
+  color: #004445; }
 
 :host([type="compress"][color="color-2"]) button:hover {
-  background-color: #9fd5b3;
-  color: #004544;
+  background-color: #9FD5B3;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="compress"][color="color-2"][active="false"]) button {
   cursor: not-allowed;
   background-color: rgba(159, 213, 179, 0.3);
-  color: #004544;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="solid"][color="color-2"]) button {
-  background-color: #9fd5b3;
-  border: 0.25em solid #9fd5b3;
-  color: #004544; }
+  background-color: #9FD5B3;
+  border: 0.25em solid #9FD5B3;
+  color: #004445; }
 
 :host([type="solid"][color="color-2"]) button:hover {
   border: 0.25em solid rgba(159, 213, 179, 0.3);
   background-color: rgba(159, 213, 179, 0.3);
-  color: #004544;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="toggle"][color="color-2"][clicked=false]) button {
-  background-color: #9fd5b3;
-  border: 0.25em solid #9fd5b3;
-  color: #004544; }
+  background-color: #9FD5B3;
+  border: 0.25em solid #9FD5B3;
+  color: #004445; }
 
 :host([type="toggle"][color="color-2"][clicked=false]) button:hover {
   background-color: rgba(159, 213, 179, 0.3);
-  color: #004544;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="toggle"][color="color-2"][clicked=true]) button {
@@ -139,50 +140,50 @@ class DetroitBtn extends LitElement {
   transform: 1s ease-in-out; }
 
 :host([type="border"][color="color-2"]) button {
-  border: 0.25em solid #9fd5b3;
+  border: 0.25em solid #9FD5B3;
   background-color: transparent;
-  color: #004544; }
+  color: #004445; }
 
 :host([type="border"][color="color-2"]) button:hover {
-  background-color: #9fd5b3;
-  color: #004544;
+  background-color: #9FD5B3;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="compress"][color="color-3"]) button {
   border: .25em solid transparent;
   background-color: transparent;
-  color: #004544; }
+  color: #004445; }
 
 :host([type="compress"][color="color-3"]) button:hover {
   background-color: #f5b842;
-  color: #004544;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="compress"][color="color-3"][active="false"]) button {
   cursor: not-allowed;
   background-color: rgba(245, 184, 66, 0.3);
-  color: #004544;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="solid"][color="color-3"]) button {
   background-color: #f5b842;
   border: 0.25em solid #f5b842;
-  color: #004544; }
+  color: #004445; }
 
 :host([type="solid"][color="color-3"]) button:hover {
   border: 0.25em solid rgba(245, 184, 66, 0.3);
   background-color: rgba(245, 184, 66, 0.3);
-  color: #004544;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="toggle"][color="color-3"][clicked=false]) button {
-  background-color: #9fd5b3;
-  border: 0.25em solid #9fd5b3;
-  color: #004544; }
+  background-color: #9FD5B3;
+  border: 0.25em solid #9FD5B3;
+  color: #004445; }
 
 :host([type="toggle"][color="color-3"][clicked=false]) button:hover {
   background-color: rgba(159, 213, 179, 0.3);
-  color: #004544;
+  color: #004445;
   transform: 1s ease-in-out; }
 
 :host([type="toggle"][color="color-3"][clicked=true]) button {
@@ -198,11 +199,68 @@ class DetroitBtn extends LitElement {
 :host([type="border"][color="color-3"]) button {
   border: 0.25em solid #f5b842;
   background-color: transparent;
-  color: #004544; }
+  color: #004445; }
 
 :host([type="border"][color="color-3"]) button:hover {
   background-color: #f5b842;
-  color: #004544;
+  color: #004445;
+  transform: 1s ease-in-out; }
+
+:host([type="compress"][color="white"]) button {
+  border: .25em solid transparent;
+  background-color: transparent;
+  color: #fff; }
+
+:host([type="compress"][color="white"]) button:hover {
+  background-color: #004445;
+  color: #fff;
+  transform: 1s ease-in-out; }
+
+:host([type="compress"][color="white"][active="false"]) button {
+  cursor: not-allowed;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  transform: 1s ease-in-out; }
+
+:host([type="solid"][color="white"]) button {
+  background-color: #fff;
+  border: 0.25em solid #fff;
+  color: #004445; }
+
+:host([type="solid"][color="white"]) button:hover {
+  border: 0.25em solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transform: 1s ease-in-out; }
+
+:host([type="toggle"][color="white"][clicked=false]) button {
+  background-color: #9FD5B3;
+  border: 0.25em solid #9FD5B3;
+  color: #004445; }
+
+:host([type="toggle"][color="white"][clicked=false]) button:hover {
+  background-color: rgba(159, 213, 179, 0.3);
+  color: #fff;
+  transform: 1s ease-in-out; }
+
+:host([type="toggle"][color="white"][clicked=true]) button {
+  background-color: #cb4d4f;
+  border: 0.25em solid #cb4d4f;
+  color: #fff; }
+
+:host([type="toggle"][color="white"][clicked=true]) button:hover {
+  background-color: rgba(203, 77, 79, 0.3);
+  color: #fff;
+  transform: 1s ease-in-out; }
+
+:host([type="border"][color="white"]) button {
+  border: 0.25em solid #fff;
+  background-color: transparent;
+  color: #fff; }
+
+:host([type="border"][color="white"]) button:hover {
+  background-color: #fff;
+  color: #004445;
   transform: 1s ease-in-out; }
 </style>
 <button @click=${this.clickHandler} aria-disabled="${(this.attributes.active.value === "true") ? false : true }" role="button" aria-pressed="false">

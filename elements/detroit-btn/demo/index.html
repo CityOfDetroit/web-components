@@ -19,6 +19,7 @@
       <h3>Basic detroit-btn demo</h3>
       <demo-snippet>
         <template>
+          <h4>Color 1</h4>
           <detroit-btn>
             <span slot="title">Solid button</span>
           </detroit-btn>
@@ -42,7 +43,7 @@
             <span slot="title">icon right button</span>
             <span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span>
           </detroit-btn>
-          <br><br>
+          <h4>Color 2</h4>
           <detroit-btn color="color-2">
             <span slot="title">Solid button</span>
           </detroit-btn>
@@ -58,7 +59,15 @@
           <detroit-btn type="compress" color="color-2" active="false">
             <span slot="title">Disabled button</span>
           </detroit-btn>
-          <br><br>
+          <detroit-btn color="color-2">
+            <span slot="icon-left"><iron-icon icon="search"></iron-icon></span>
+            <span slot="title">icon left button</span>
+          </detroit-btn>
+          <detroit-btn color="color-2">
+            <span slot="title">icon right button</span>
+            <span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span>
+          </detroit-btn>
+          <h4>Color 3</h4>
           <detroit-btn color="color-3">
             <span slot="title">Solid button</span>
           </detroit-btn>
@@ -73,6 +82,38 @@
           </detroit-btn>
           <detroit-btn type="compress" color="color-3" active="false">
             <span slot="title">Disabled button</span>
+          </detroit-btn>
+          <detroit-btn color="color-3">
+            <span slot="icon-left"><iron-icon icon="search"></iron-icon></span>
+            <span slot="title">icon left button</span>
+          </detroit-btn>
+          <detroit-btn color="color-3">
+            <span slot="title">icon right button</span>
+            <span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span>
+          </detroit-btn>
+          <h4>White (dark backgrouds)</h4>
+          <detroit-btn color="white">
+            <span slot="title">Solid button</span>
+          </detroit-btn>
+          <detroit-btn type="toggle" color="white">
+            <span slot="title">Toggle button</span>
+          </detroit-btn>
+          <detroit-btn type="border" color="white">
+            <span slot="title">Border button</span>
+          </detroit-btn>
+          <detroit-btn type="compress" color="white">
+            <span slot="title">Compress button</span>
+          </detroit-btn>
+          <detroit-btn type="compress" color="white" active="false">
+            <span slot="title">Disabled button</span>
+          </detroit-btn>
+          <detroit-btn color="white">
+            <span slot="icon-left"><iron-icon icon="search"></iron-icon></span>
+            <span slot="title">icon left button</span>
+          </detroit-btn>
+          <detroit-btn color="white">
+            <span slot="title">icon right button</span>
+            <span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span>
           </detroit-btn>
         </template>
       </demo-snippet>

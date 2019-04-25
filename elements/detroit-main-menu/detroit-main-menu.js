@@ -24,6 +24,7 @@ class DetroitMainMenu extends LitElement {
     return html`
 <style>@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,900");
 :host {
+  font-family: 'Montserrat', sans-serif;
   display: block; }
   :host nav {
     position: fixed;
@@ -33,7 +34,7 @@ class DetroitMainMenu extends LitElement {
     color: #fff;
     width: 30em;
     max-width: 100%;
-    transition: right 1s ease;
+    transition: right 500ms ease;
     z-index: 5; }
     :host nav ul {
       list-style-type: none;
@@ -44,21 +45,21 @@ class DetroitMainMenu extends LitElement {
         align-items: stretch; }
         :host nav ul li a {
           flex: 1;
-          margin: auto;
+          display: flex;
           text-decoration: none;
-          color: #fff;
-          padding: .5em; }
+          color: #fff; }
+          :host nav ul li a span {
+            margin: auto 1em; }
+        :host nav ul li a:hover {
+          color: #004445;
+          background-color: #9FD5B3; }
         :host nav ul li detroit-btn {
           margin: auto;
           width: 5em; }
-      :host nav ul li:hover {
-        background-color: #9fd5b3; }
-        :host nav ul li:hover a {
-          color: #004544; }
 
 :host([active="true"]) nav {
   right: 0em;
-  transition: right 1s ease; }
+  transition: right 500ms ease; }
 
 :host([hidden]) {
   display: none; }
@@ -69,13 +70,13 @@ class DetroitMainMenu extends LitElement {
 <nav>
     <ul>
         <li>
-            <a href="#departments">DEPARMENTS</a><detroit-btn type="compress" color="color-1"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
+            <a href="#departments"><span>DEPARMENTS</span></a><detroit-btn type="compress" color="white"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
         </li>
         <li>
-            <a href="#governemt">GOVERNMENT</a><detroit-btn type="compress" color="color-1"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
+            <a href="#governemt"><span>GOVERNMENT</span></a><detroit-btn type="compress" color="white"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
         </li>
         <li>
-            <a href="#how-do-i">HOW DO I</a><detroit-btn type="compress" color="color-1"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
+            <a href="#how-do-i"><span>HOW DO I</span></a><detroit-btn type="compress" color="white"><span slot="icon-right"><iron-icon icon="chevron-right"></iron-icon></span></detroit-btn>
         </li>
     <ul>
 </nav>`;
